@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: wechat-service
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: true #注册自身
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
+  datacenter: cloud
+  environment: product
+
+# 公众号配置
+wx:
+  mp:
+    appid: wxaf7fe05a8ac03b66
+    secret: 57b48fcec2d5db1ad3a0810eae4cc658
+    token: yunzhi
+    aesKey: 123
+
